@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Jn4b7xgVb/OiKKkkRDd+E6Een+iWzAkuUfexheWXSbSG+ADVP0RcYqWZR/ScbDq/dTyuTFWrl6+fl3gyD+YYvw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Jersey+25&display=swap');
+        .modal-content {
+            background-color: transparent;
+        }
+
+        .modal-header {
+            position: relative;
+            top: 4;
+            right: 0;
+            z-index: 1;
+        }
+
+        .jumbotron {
+            background-image: url("images/pngtree-collection-of-photos-is-seen-with-the-paris-tower-picture-image_2639822.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-color: transparent; */
+            font-family:Font-Awesome ;
+            
+        }
+
+        .jumbotron>h1 {
+            line-height: 6.2;
+            font-weight: 400;
+            font-size: 3rem;
+            word-spacing: 9px;
+            letter-spacing: -4px;
+            color:aqua;
+            z-index: 1;
+        }
+
+        .btn-close {
+            position: relative;
+            top:4rem ;
+            left:4rem ;
+        }
+        
+        .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card-img-top {
+            height: 50vh;
+            object-fit: cover;
+            display: flex;
+            justify-content: space-evenly;
+            cursor: pointer;
+        }
+
+        .img-row {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center mb-5"><b>The Image Gallery</b></h1>
+            
+        </div>
+    </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="height: 80vh;">
+                <div class="modal-content border-0">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body  d-flex justify-content-center align-items-center">
+                        <img id="modalImage" class="img-fluid mb-5 "
+                            style="max-width: 100vw; max-height: 90vh; position:fixed" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
